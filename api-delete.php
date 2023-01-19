@@ -6,7 +6,7 @@ header("Acess-Control-Allow-Methods: DELETE");
 header("Acess-Control-Allow-Header: Acess-Control-Allow-Headers, Content-Type,
 Acess-Control-Allow-Methods, Authorization");
 
-$data = jason_encode(file_get_contents("php://input"), true);
+$data = json_encode(file_get_contents("php://input"), true);
 
 $pide = $data["id"];
 
@@ -18,7 +18,7 @@ if(mysquli_query($conn, $query) or die("Delete Query Failed"))
 {
     echo json_encode(array("message" => "Product Delete Successfully", "status" =>true));
 }else{
-    echo json_enconde(array("message" => "Failed Product Not Deleted", "status" => false));
+    echo json_encode(array("message" => "Failed Product Not Deleted", "status" => false));
 }
 
 ?>
