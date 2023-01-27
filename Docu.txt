@@ -1,0 +1,18 @@
+Para conectar tu base de datos simplemente sustituye estos datos por los tuyos:
+
+$DBhost = "localhost:3306"; //Colocar aqui tu localhost y puerto
+$DBuser = "root"; //nombre de usuario en la base de datos
+$DBpass = "123456";  //contraseña de la base de datos, en caso de no tener colocar simplemnte ""
+$DBname ="php_crud_api_db";  //nombre de la base de datos que usaras
+
+
+QUERY PARA CREAR BASE DE DATOS:
+
+CREATE TABLE php_crud_api_db(
+    id INT NOT NULL AUTO_INCREMENT, 
+    name VARCHAR(50) NOT NULL,
+    price INT NOT NULL,
+    PRIMARY KEY(id)
+)
+
+Cualquier duda preguntar
